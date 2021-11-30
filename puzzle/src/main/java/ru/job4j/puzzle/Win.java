@@ -12,20 +12,24 @@ public class Win {
                     vWin++;
                 }
             }
-            if (vWin == 5) return true;
+            if (vWin == 5) {
+                return true;
+            }
         }
         return false;
     }
 
     public static boolean checkHorizontal(int[][] board) {
-        for (int i = 0; i < board.length; i++) {
+        for (int[] line : board) {
             int hWin = 0;
-            for (int j = 0; j < board[i].length; j++) {
-                if (board[i][j] == 1) {
+            for (int row : line) {
+                if (row == 1) {
                     hWin++;
                 }
             }
-            if (hWin == 5) return true;
+            if (hWin == 5) {
+                return true;
+            }
         }
         return false;
     }
