@@ -1,9 +1,11 @@
 package ru.job4j.puzzle;
 
 public class Win {
+
     public static boolean check(int[][] board) {
         return (checkVertical(board) || checkHorizontal(board));
     }
+
     public static boolean checkVertical(int[][] board) {
         for (int j = 0; j < board.length; j++) {
             int vWin = 0;
