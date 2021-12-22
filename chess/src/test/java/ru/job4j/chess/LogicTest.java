@@ -25,7 +25,8 @@ public class LogicTest {
 
     @Test(expected = OccupiedCellException.class)
     public void occupied()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException, NullPointerException {
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException,
+            NullPointerException {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.C1));
         logic.add(new BishopBlack(Cell.D2));

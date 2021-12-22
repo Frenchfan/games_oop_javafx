@@ -2,6 +2,7 @@ package ru.job4j.chess;
 
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
+
 import java.util.Arrays;
 
 public final class Logic {
@@ -21,16 +22,15 @@ public final class Logic {
     }
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
-        for (Cell step: steps) {
+        for (Cell step : steps) {
             for (Figure checkFigure : figures) {
-                if (checkFigure!=null && step.equals(checkFigure.position())) {
+                if (checkFigure != null && step.equals(checkFigure.position())) {
                     throw new OccupiedCellException("The way is blocked");
                 }
             }
         }
         return true;
     }
-
 
     public void clean() {
         Arrays.fill(figures, null);

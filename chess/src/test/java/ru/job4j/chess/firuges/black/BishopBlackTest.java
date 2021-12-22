@@ -34,7 +34,7 @@ public class BishopBlackTest {
         Figure bishop = new BishopBlack(start);
         Cell target = Cell.G5;
         Cell[] steps = bishop.way(target);
-        Cell[] checkWay = new Cell[] {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        Cell[] checkWay = new Cell[]{Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         assertThat(steps, is(checkWay));
     }
 
