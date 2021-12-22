@@ -21,8 +21,16 @@ public final class Logic {
     }
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
+        for (Cell step: steps) {
+            for (Figure checkFigure : figures) {
+                if (checkFigure!=null && step.equals(checkFigure.position())) {
+                    throw new OccupiedCellException("The way is blocked");
+                }
+            }
+        }
         return true;
     }
+
 
     public void clean() {
         Arrays.fill(figures, null);
